@@ -6,6 +6,8 @@ public class Lion {
 
     boolean hasMane;
 
+    private Feline feline;
+
     public Lion(String sex) throws Exception {
         if ("Самец".equals(sex)) {
             hasMane = true;
@@ -16,9 +18,8 @@ public class Lion {
         }
     }
 
-    Feline feline = new Feline();
-
-    public int getKittens() {
+    public int getKittens(Feline feline) {
+        this.feline = feline;
         return feline.getKittens();
     }
 
@@ -26,7 +27,8 @@ public class Lion {
         return hasMane;
     }
 
-    public List<String> getFood() throws Exception {
+    public List<String> getFood(Feline feline) throws Exception {
+        this.feline = feline;
         return feline.getFood("Хищник");
     }
 }
