@@ -23,7 +23,7 @@ public class CatTest {
         String actualSound = cat.getSound();
 
         //Assert
-        assertEquals(expectedSound, actualSound);
+        assertEquals("getSound unit test failed!", expectedSound, actualSound);
     }
 
     @Test
@@ -37,6 +37,6 @@ public class CatTest {
         List<String> actualFood = cat.getFood();
 
         //Assert
-        assertEquals(expectedFood, actualFood);
+        assertEquals("getFood unit test failed!", expectedFood, actualFood);
     }
 }

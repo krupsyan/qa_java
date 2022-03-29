@@ -16,7 +16,7 @@ public class LionTest {
     Feline feline;
 
     @Test
-    public void getKittensNoArgumentReturnsCorrectValue() throws Exception {
+    public void getKittensReturnsCorrectValue() throws Exception {
         //Arrange
         Lion lion = new Lion("Самец");
         int expectedKittens = 1;
@@ -26,21 +26,7 @@ public class LionTest {
         int actualKittens = lion.getKittens(feline);
 
         //Assert
-        assertEquals(expectedKittens, actualKittens);
-    }
-
-    @Test
-    public void getKittensWithArgumentsReturnsCorrectValue() throws Exception {
-        //Arrange
-        Lion lion = new Lion("Самец");
-        int expectedKittens = 1;
-        Mockito.when(feline.getKittens()).thenReturn(1);
-
-        //Act
-        int actualKittens = lion.getKittens(feline);
-
-        //Assert
-        assertEquals(expectedKittens, actualKittens);
+        assertEquals("getKittens unit test failed!", expectedKittens, actualKittens);
     }
 
     @Test
@@ -55,6 +41,6 @@ public class LionTest {
         List<String> actualFood = lion.getFood(feline);
 
         //Assert
-        assertEquals(expectedFood, actualFood);
+        assertEquals("getFood unit test failed!", expectedFood, actualFood);
     }
 }

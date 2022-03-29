@@ -12,9 +12,9 @@ public class LionDoesHaveManeNegativeTest {
     public ExpectedException exceptionRule = ExpectedException.none();
 
     @Test
-    public void whenExceptionThrown_thenRuleIsApplied() throws Exception {
+    public void whenExceptionThrownThenRuleIsApplied() throws Exception {
         exceptionRule.expect(Exception.class);
         exceptionRule.expectMessage("Используйте допустимые значения пола животного - самей или самка");
-        Lion lion = new Lion(sex);
+        new Lion(sex);
     }
 }

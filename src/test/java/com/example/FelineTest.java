@@ -26,7 +26,7 @@ public class FelineTest {
         List<String> actualFood = feline.eatMeat();
 
         //Assert
-        assertEquals(expectedFood, actualFood);
+        assertEquals("eatMeat unit test failed!", expectedFood, actualFood);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class FelineTest {
         String actualFamily = feline.getFamily();
 
         //Assert
-        assertEquals(expectedFamily, actualFamily);
+        assertEquals("getFamily unit test failed!", expectedFamily, actualFamily);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class FelineTest {
         int actualKittens = feline.getKittens();
 
         //Assert
-        assertEquals(expectedKittens, actualKittens);
+        assertEquals("getKittens() unit test failed!", expectedKittens, actualKittens);
     }
 
     @Test
@@ -65,6 +65,6 @@ public class FelineTest {
         int actualKittens = feline.getKittens(5);
 
         //Assert
-        assertEquals(expectedKittens, actualKittens);
+        assertEquals("getKittens(5) unit test failed!", expectedKittens, actualKittens);
     }
 }

@@ -15,7 +15,7 @@ public class LionDoesHaveManePositiveTest {
         this.expectedHasMane = expectedHasMane;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1}")
     public static Object[][] getManeBySex() {
         return new Object[][]{
                 //Sex       //Result
@@ -28,6 +28,6 @@ public class LionDoesHaveManePositiveTest {
     public void lionHasManeBySexIsCorrect() throws Exception {
         Lion lion = new Lion(sex);
         boolean actual = lion.doesHaveMane();
-        assertEquals(expectedHasMane, actual);
+        assertEquals("getManeBySex unit test failed!", expectedHasMane, actual);
     }
 }
